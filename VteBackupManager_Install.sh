@@ -7,9 +7,9 @@ cd "$(dirname "$0")"
 
 systemctl stop $PROJECT_NAME
 
-rm -r .backup
-mkdir -p .backup
-cp -r * .backup
+rm -r $PROJECT_NAME/.backup
+mkdir -p $PROJECT_NAME/.backup
+cp -r $PROJECT_NAME/* $PROJECT_NAME/.backup
 
 wget https://github.com/$GH_USER/$GH_REPO/archive/$GH_BRANCH.tar.gz -O $GH_REPO-$GH_BRANCH.tar.gz
 
@@ -19,7 +19,7 @@ rm $GH_REPO-$GH_BRANCH.tar.gz
 cp -r $GH_REPO-$GH_BRANCH/* .
 rm -r $GH_REPO-$GH_BRANCH
 
-cp .backup/appsettings.json .
+cp $PROJECT_NAME/.backup/appsettings.json $PROJECT_NAME/.
 
 chmod +x install.sh
 chmod +x $PROJECT_NAME

@@ -19,6 +19,7 @@ systemctl stop $PROJECT_NAME
 cp -r $GH_REPO-$GH_BRANCH/* .
 rm -r $GH_REPO-$GH_BRANCH
 
+cp $PROJECT_NAME/appsettings.json $PROJECT_NAME/new_appsettings.json
 cp $PROJECT_NAME/.backup/appsettings.json $PROJECT_NAME/.
 
 chmod +x $PROJECT_NAME/VteBackupManager_Install.sh

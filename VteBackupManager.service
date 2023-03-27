@@ -1,0 +1,13 @@
+[Unit]
+Description=VTE Backup Manager Service
+StartLimitIntervalSec=500
+StartLimitBurst=5
+
+[Service]
+ExecStart=/logika/VteBackupManager/VteBackupManager
+SyslogIdentifier=VteBackupManager
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

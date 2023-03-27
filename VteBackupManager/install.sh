@@ -7,21 +7,22 @@ cd "$(dirname "$0")"
 
 systemctl stop $PROJECT_NAME
 
-mkdir -p ./$PROJECT_NAME/.backup
-cp -r ./$PROJECT_NAME/* ./$PROJECT_NAME/.backup
+rm -r .backup
+mkdir -p .backup
+cp -r * .backup
 
 wget https://github.com/$GH_USER/$GH_REPO/archive/$GH_BRANCH.tar.gz -O $GH_REPO-$GH_BRANCH.tar.gz
 
 tar -xzvf $GH_REPO-$GH_BRANCH.tar.gz
-rm ./$GH_REPO-$GH_BRANCH.tar.gz
+rm $GH_REPO-$GH_BRANCH.tar.gz
 
-cp -r ./$GH_REPO-$GH_BRANCH/* .
-rm -r ./$GH_REPO-$GH_BRANCH
+cp -r $GH_REPO-$GH_BRANCH/* .
+rm -r $GH_REPO-$GH_BRANCH
 
-cp ./$PROJECT_NAME/.backup/appsettings.json ./$PROJECT_NAME/appsettings.json
+cp .backup/appsettings.json .
 
-chmod +x ./DownloadVteBackupManager.sh
-chmod +x ./$PROJECT_NAME/$PROJECT_NAME
+chmod +x install.sh
+chmod +x $PROJECT_NAME
 
 mv ./$PROJECT_NAME.service /etc/systemd/system
 

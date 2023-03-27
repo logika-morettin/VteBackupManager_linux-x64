@@ -14,6 +14,8 @@ wget https://github.com/$GH_USER/$GH_REPO/archive/$GH_BRANCH.tar.gz -O $GH_REPO-
 tar -xzvf $GH_REPO-$GH_BRANCH.tar.gz
 rm $GH_REPO-$GH_BRANCH.tar.gz
 
+systemctl stop $PROJECT_NAME
+
 cp -r $GH_REPO-$GH_BRANCH/* .
 rm -r $GH_REPO-$GH_BRANCH
 

@@ -8,7 +8,7 @@ cd "$(dirname "$0")"
 systemctl stop $PROJECT_NAME
 
 mkdir -p ./$PROJECT_NAME/.backup
-cp ./$PROJECT_NAME/* ./$PROJECT_NAME/.backup
+cp -r ./$PROJECT_NAME/* ./$PROJECT_NAME/.backup
 
 wget https://github.com/$GH_USER/$GH_REPO/archive/$GH_BRANCH.tar.gz -O $GH_REPO-$GH_BRANCH.tar.gz
 

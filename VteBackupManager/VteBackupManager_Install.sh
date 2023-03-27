@@ -1,5 +1,7 @@
 PROJECT_NAME=VteBackupManager
 
+cd "$(dirname "$0")"
+
 systemctl stop $PROJECT_NAME
 
 chmod +x $PROJECT_NAME

@@ -7,6 +7,7 @@ cd "$(dirname "$0")"
 
 rm -r $PROJECT_NAME/.backup
 mkdir -p $PROJECT_NAME/.backup
+rm -r $PROJECT_NAME/Backup
 cp -r $PROJECT_NAME/* $PROJECT_NAME/.backup
 
 wget https://github.com/$GH_USER/$GH_REPO/archive/$GH_BRANCH.tar.gz -O $GH_REPO-$GH_BRANCH.tar.gz

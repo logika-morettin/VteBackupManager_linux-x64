@@ -10,6 +10,7 @@
       "VteBackupManager/1.0.0": {
         "dependencies": {
           "AWSSDK.S3": "3.7.103.31",
+          "CliWrap": "3.6.0",
           "Contabo.ObjectStorage.S3": "1.0.6",
           "FluentValidation": "11.5.1",
           "FluentValidation.DependencyInjectionExtensions": "11.5.1",
@@ -100,6 +101,10 @@
             "fileVersion": "6.0.1022.47605"
           },
           "System.Diagnostics.StackTrace.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.1022.47605"
+          },
+          "System.Diagnostics.Tools.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.1022.47605"
           },
@@ -485,6 +490,14 @@
           "lib/netcoreapp3.1/AWSSDK.S3.dll": {
             "assemblyVersion": "3.3.0.0",
             "fileVersion": "3.7.103.31"
+          }
+        }
+      },
+      "CliWrap/3.6.0": {
+        "runtime": {
+          "lib/netcoreapp3.0/CliWrap.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
           }
         }
       },
@@ -1686,6 +1699,13 @@
       "sha512": "sha512-YSuXLKor9j3jwzTBgjCAYCR9xHmtBbymSh1q57ipnp2ZVsezniD+x0u94EVZABcdFFWwgYpy+YmbTaMy8Se7ig==",
       "path": "awssdk.s3/3.7.103.31",
       "hashPath": "awssdk.s3.3.7.103.31.nupkg.sha512"
+    },
+    "CliWrap/3.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AY6LvRZOEYuAiuaWPLnIDddJUnpiPpiSvfoPwweEXI1orRNnsAwf6sOv9Tt0J4GFrlwejFF/INuR57iEKIh7bw==",
+      "path": "cliwrap/3.6.0",
+      "hashPath": "cliwrap.3.6.0.nupkg.sha512"
     },
     "Contabo.ObjectStorage.S3/1.0.6": {
       "type": "package",
